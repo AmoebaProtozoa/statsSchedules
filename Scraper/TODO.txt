@@ -1,14 +1,25 @@
 1.
-  Scrape all class that is currently offered at Berkeley from http://guide.berkeley.edu/courses/
+  Scrape all class that is currently offered at Berkeley from http://guide.berkeley.edu/courses/:
   create a huge CSV for every class with useful information:
-  depart:   string,         the department this class is in.          "Math"
+  depart:   string,         the department this class is in.          "MATH"
   name:     string,         name of the class.                        "Multivariable Calculus"
-  prereq:   list of string, all the "immediate" pre-req of the class  ["Math 1A", "Math 1B"]
+  prereq:   string,         prereq of the class                       "Mathematics 1B"
   number:   string,         number of the class                       "53"
-  isAC:     boolean,        if it satisfy AC requirement              False
-  isRCA:    boolean,        if it satisfy first half R&C              False
-  isRCB:    boolean,        if it satisfy second half R&C             False
   units:    Integer,        number of units                           4
   descrip   string,         course description                        "Parametric equations and polar coordinates. Vectors in 2- and 3-dimensional Euclidean spaces. Partial derivatives. Multiple integrals. Vector calculus. Theorems of Green, Gauss, and Stokes. "
 
 2.
+  Process the CSV:
+  isAC:     boolean,        if it satisfy AC requirement              False
+  isRCA:    boolean,        if it satisfy first half R&C              False
+  isRCB:    boolean,        if it satisfy second half R&C             False
+
+3.
+  Merge the CSV with the Breath Requirements:
+  breath_1: boolean,        if it satisfy Arts and Literature
+  breath_2: boolean,        Biological Science
+  breath_3: boolean,        Historical Studies
+  breath_4: boolean,        International Studies
+  breath_5: boolean,        Philosophy and Values
+  breath_6: boolean,        Physical Science
+  breath_7: boolean,        Social and Behavioral Sciences
